@@ -37,7 +37,7 @@ This project is an interactive Train Traffic Management System designed to optim
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/train-traffic-management-system.git
+   git clone https://github.com/abilashhh/train-traffic-management-system.git
    cd train-traffic-management-system
 
 2. **Install dependencies**:
