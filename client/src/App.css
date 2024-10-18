@@ -1,0 +1,256 @@
+/* App.css */
+
+body {
+  background-color: #f0f0f0;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.header {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.live-time {
+  font-size: 1.2rem;
+  background-color: rgba(255,255,255,0.1);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.logout-button {
+  background-color: #e74c3c; 
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #c0392b; 
+}
+
+.button-container {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.station-dropdown {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  min-width: 200px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 12px auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.station-dropdown:hover,
+.station-dropdown:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.filter-button {
+  padding: 10px 15px;
+  margin-right: 5px;
+  background-color: #ecf0f1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.filter-button:last-child {
+  margin-right: 0;
+}
+
+.filter-button.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.filter-button:hover {
+  background-color: #bdc3c7;
+  transform: translateY(-2px);
+}
+
+.filter-button.active:hover {
+  background-color: #2980b9;
+}
+
+.filter-button:active {
+  transform: translateY(0);
+}
+
+.log-button {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.log-button:hover {
+  background-color: #27ae60;
+}
+
+.timeline-container {
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.react-calendar-timeline {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1600px;
+  position: relative;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.react-calendar-timeline .rct-header-root {
+  background-color: #2c3e50;
+  color: black;
+}
+
+.react-calendar-timeline .rct-item {
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.react-calendar-timeline .rct-item.on-time {
+  background-color: green !important;
+}
+
+.react-calendar-timeline .rct-item.delayed {
+  background-color: rgba(234, 15, 15, 0.933) !important;
+}
+
+.react-calendar-timeline .rct-item.cancelled {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.react-calendar-timeline .rct-item-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal p {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  transition: background-color 0.3s;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal button:hover {
+  background-color: #2980b9;
+}
+
+.weather-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+  font-size: 0.9rem;
+}
+
+.weather-widget.error,
+.weather-widget.loading {
+  font-style: italic;
+  color: #ccc;
+}
+
+.weather-widget span:first-child {
+  font-weight: bold;
+}

@@ -1,0 +1,67 @@
+/* SideOutPanel.css */
+
+.side-out-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.side-out-panel.show {
+  right: 0;
+}
+
+.side-out-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.side-out-panel-content {
+  padding: 16px;
+}
+
+.log-entry {
+  margin-bottom: 10px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.status-button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 16px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.status-button.available {
+  background-color: rgb(62, 195, 5);
+}
+
+.status-button.cancel {
+  background-color: red;
+}
+
+.status-button:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,44 @@
+.modal {
+  position: fixed; /* Ensure the modal is fixed to the viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the centering */
+  background-color: #fff; /* Modal background */
+  padding: 20px; /* Padding inside the modal */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  z-index: 1000; /* Ensure it is on top of other elements */
+  border-radius: 8px; /* Rounded corners */
+  width: 400px; /* Width of the modal */
+  text-align: center; /* Center text inside the modal */
+}
+
+.modal-overlay {
+  position: fixed; /* Ensure the overlay is fixed to the viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+  z-index: 999; /* Ensure it is behind the modal but on top of other elements */
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+}
+
+.modal p {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
