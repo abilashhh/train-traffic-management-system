@@ -77,7 +77,7 @@ This project is an interactive Train Traffic Management System designed to optim
 ## Contact
 **For further information or questions, feel free to reach out to me**:
 - Abilash Karthi Balachandran Sangeetha
-- Email: A.K.Balachandran-Sangeetha2@newcastle.ac.uk (or) abilashkarthi@outlook.com
+- Email: abilashkarthi@outlook.com
 
 
 
